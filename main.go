@@ -11,7 +11,8 @@ func main() {
 	http.HandleFunc("/post", controller.HandlePost)
 	http.HandleFunc("/get", controller.HandleGet)
 	http.HandleFunc("/post/forward", controller.HandlePostAndForward)
-	//http.HandleFunc("/forward", controller.HandleForward)
+	http.HandleFunc("/query", controller.HandleFileQuery)
+	http.HandleFunc("/delete", controller.HandleDelete)
 
 	// 启动 HTTP 服务器
 	port := ":8081"
